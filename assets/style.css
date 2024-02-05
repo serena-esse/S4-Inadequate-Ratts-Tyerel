@@ -1,0 +1,87 @@
+body {
+    font-family: 'Outfit', 'inter';
+    background-image: url(./bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* START HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo {
+    max-width: 100%;
+    width: 15%;
+    height: auto;
+    margin: 1rem;
+    padding: 1% 1% 0% 6% ;
+}
+
+#tempo-rimasto {
+    margin-left: auto;
+    font-size: 1rem;    
+}
+/* END HEADER */
+
+/* START MAIN */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.centered-text {
+    text-align: center;
+    font-size: 4rem;
+    line-height: 1.5;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.custom-button {
+    width: 38%;
+    padding: 1.7rem 2rem;
+    margin: 1rem;
+    border-radius: 40px;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    border : 3px solid;
+}
+
+.custom-button:hover {
+    background-color: #AE0087;
+}
+
+.question-counter {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: auto;
+    letter-spacing: 2px;
+}
+
+/* END MAIN */
