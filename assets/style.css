@@ -49,9 +49,6 @@ body {
 
 .contenitore input[type="checkbox"] {
   margin-right: 8px;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   width: 15px;
   height: 15px;
   border: 3px solid white;
@@ -68,6 +65,14 @@ body {
   border: none;
   font-weight: bold;
   box-shadow: 0 0px 18px #00ffff;
+  cursor: pointer; /* Cambiare il cursore al passaggio */
+}
+
+.contenitore .bottone-procedi:disabled {
+  background-color: #dddddd; /* Colore di sfondo quando disabilitato */
+  color: #555; /* Colore del testo quando disabilitato */
+  cursor: not-allowed; /* Cambiare il cursore a "non permesso" quando disabilitato */
+  box-shadow: 0 0px 18px #555;
 }
 
 .grassetto {
