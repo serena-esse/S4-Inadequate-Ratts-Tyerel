@@ -1,0 +1,95 @@
+/* RULES */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* UTILITY */
+body{
+  width: 100%;
+  background-image: url(./bg.jpg);
+  background-size: cover;
+  
+ 
+}
+h1 ,p {
+  color: white;
+  text-align: center;
+}
+h1{
+  font-family: 'Outfit', sans-serif;
+  font-size: 60px;
+  
+}
+p{
+  font-family: 'Inter', sans-serif; ;
+  font-size: 25px;
+}
+main, footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  
+}
+/* HEADER */
+.containerlogo{
+   
+    padding-left: 5rem;
+    padding-top: 1rem;
+}
+
+.logo {
+    text-align: left;
+    width: 15%;
+    font-size: 30px;
+    padding-top: 30px;
+}
+.titolo {
+  padding-top: 50px;
+  margin-top: 84px;
+  display: block;
+ }
+.containerp{
+  display: block;
+  padding-top: 20px;
+
+}
+.containerp2{
+  display: block;
+  padding-top: 60px;
+}
+/* MAIN */
+
+
+
+/* FOOTER */
+
+.textarea {
+  width: 70%;
+  padding: 30px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #d20094 ;
+  border-radius: 5px;
+  background: transparent;
+  color: white;
+}
+.containertextarea{
+  padding-top: 20px;
+
+}
+.bottone {
+  padding: 18px 60px;
+  font-size: 19px;
+  background-color: #00ffff;
+  color: rgb(11, 17, 59);
+  border: none;
+  font-weight: bold;
+  box-shadow: 0 0px 18px #00ffff;
+}
+.buttoncontainer{
+  padding-top: 50px;
+}
