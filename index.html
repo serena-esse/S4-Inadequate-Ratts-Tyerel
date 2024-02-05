@@ -4,6 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>S4</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Outfit:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script type="javascript" src="./index.js"></script>
   </head>
-  <body></body>
+  <body>
+    <header><img class="logo" src="./assets/epicode_logo.png" alt="epicode_logo" /></header>
+    <h1>Results</h1>
+    <h2>The summary of your answers:</h2>
+    <div class="container">
+      <div class="side">
+        <p class="outcome">Correct</p>
+        <p class="percent">66.7%</p>
+        <p class="questions">4/6 questions</p>
+      </div>
+      <div class="donut-chart" id="donut-chart">
+        <div class="donut-segment" id="donut-segment1"></div>
+        <div class="donut-segment" id="donut-segment2"></div>
+      </div>
+      <div class="side">
+        <p class="outcome">Wrong</p>
+        <p class="percent">33.3%</p>
+        <p class="questions">2/6 questions</p>
+      </div>
+    </div>
+    <div class="button">
+      <button>RATE US</button>
+    </div>
+  </body>
 </html>
