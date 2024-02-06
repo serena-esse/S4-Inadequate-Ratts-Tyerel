@@ -56,6 +56,11 @@ body {
   margin-right: 5px;
 }
 
+/* NON FUNZIONA */
+.contenitore input[type="checkbox"]:checked {
+  background-color: #00ffff; /* Cambia il colore di sfondo quando la casella è spuntata */
+}
+
 .contenitore .bottone-procedi {
   padding: 18px 60px;
   font-size: 19px;
@@ -65,7 +70,7 @@ body {
   border: none;
   font-weight: bold;
   box-shadow: 0 0px 18px #00ffff;
-  cursor: pointer; /* Cambiare il cursore al passaggio */
+  cursor: pointer; /*cursore al passaggio */
 }
 
 .contenitore .bottone-procedi:disabled {
@@ -80,9 +85,5 @@ body {
 }
 
 .interlinealista {
-  line-height: 1.5; /* Imposta uno spazio tra le righe del 50% rispetto all'altezza del testo */
-}
-
-footer {
-  display: block;
+  line-height: 1.5; /* Imposto uno spazio tra le righe del 50% rispetto all'altezza del testo */
 }
