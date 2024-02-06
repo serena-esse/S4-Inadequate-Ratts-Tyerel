@@ -1,8 +1,14 @@
-const data = [70, 30];
-const total = data.reduce((acc, value) => acc + value, 0);
+const elemento = document.getElementById("donut");
 
-const segment1 = document.getElementById("donut-segment1");
-const segment2 = document.getElementById("donut-segment2");
+function setConicGradient(primoPercentuale, secondoPercentuale) {
+  const primoGradi = primoPercentuale * 3.6;
+  const secondoGradi = primoGradi;
 
-segment1.style.transform = `rotate(${(data[0] / total) * 360}deg)`;
-segment2.style.transform = `rotate(${(data[1] / total) * 360}deg)`;
+  const gradiente = `conic-gradient(#00ffff 0deg ${primoGradi}deg, #d20094 ${secondoGradi}deg 360deg)`;
+
+  elemento.style.background = gradiente;
+}
+
+const primaPercentuale = 100;
+const secondaPercentuale = 0;
+setConicGradient(primaPercentuale, secondaPercentuale);

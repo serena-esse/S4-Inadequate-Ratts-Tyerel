@@ -12,7 +12,6 @@
     />
     <link rel="stylesheet" href="./assets/reset.css" />
     <link rel="stylesheet" href="./assets/style.css" />
-    <script type="javascript" src="./index.js"></script>
   </head>
   <body>
     <header><img class="logo" src="./assets/epicode_logo.png" alt="epicode_logo" /></header>
@@ -24,9 +23,13 @@
         <p class="percent">66.7%</p>
         <p class="questions">4/6 questions</p>
       </div>
-      <div class="donut-chart" id="donut-chart">
-        <div class="donut-segment" id="donut-segment1"></div>
-        <div class="donut-segment" id="donut-segment2"></div>
+      <div id="donut">
+        <span class="donut-text"
+          ><span class="donut-text1">Congratulations!</span><span class="donut-text2"> You passed the exam. </span
+          ><span class="donut-text3"
+            >We'll send you the certificate in few minutes. Check your email (including promotions / spam folder)</span
+          ></span
+        >
       </div>
       <div class="side">
         <p class="outcome">Wrong</p>
@@ -37,5 +40,6 @@
     <div class="button">
       <button>RATE US</button>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>

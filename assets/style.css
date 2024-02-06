@@ -36,16 +36,6 @@ h2 {
   color: white;
 }
 
-.donut-chart {
-  border: 1px solid #000;
-  margin: 0 auto;
-  flex: 0.5;
-  text-align: center;
-  width: 200px;
-  height: 200px;
-  position: relative;
-  border-radius: 50%;
-}
 .outcome {
   font-family: "Outfit", sans-serif;
   font-size: 60px;
@@ -74,22 +64,57 @@ button {
   text-align: center;
   padding-top: 10px;
 }
-
-.donut-segment {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+/* (A) PIE CHART */
+#donut {
+  /* (A1) CIRCLE */
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+  /* (A2) SEGMENTS */
+  background: conic-gradient(#00ffff 0deg 180deg, #d20094 180deg 360deg);
+}
+/* (B) DONUT "CONVERSION" */
+/* (B1) SMALLER CIRCLE */
+#donut::before {
+  content: "";
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background-image: url(/assets/bg.jpg);
+  clip-path: circle(50% at 50% 50%);
 }
 
-#donut-segment1 {
-  background-color: #0052cc;
-  transform: rotate(0deg);
+/* (B2) "CONVERT PIE TO DONUT" - CENTER SMALLER CIRCLE */
+#donut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-#donut-segment2 {
-  background-color: #d20094;
-  transform: rotate(0deg);
+.donut-text {
+  position: absolute;
+  width: 160px;
+  color: white;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+.donut-text1 {
+  color: white;
+  font-weight: bold;
+  display: block;
+  font-size: 14px;
+}
+.donut-text2 {
+  color: #00ffff;
+  font-weight: bold;
+  display: block;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.donut-text3 {
+  display: block;
+  margin-top: 1rem;
+  font-size: 11px;
+  line-height: 1.5;
 }
