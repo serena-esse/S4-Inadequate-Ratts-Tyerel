@@ -36,16 +36,19 @@ h2 {
   color: white;
 }
 
-.outcome {
+.outcome1,
+.outcome2 {
   font-family: "Outfit", sans-serif;
   font-size: 60px;
 }
-.percent {
+.percent1,
+.percent2 {
   font-weight: bold;
   font-family: "Outfit", sans-serif;
   font-size: 60px;
 }
-.questions {
+.questions1,
+questions2 {
   font-family: "Outfit", sans-serif;
   font-size: 20px;
 }
