@@ -44,8 +44,7 @@ main, footer {
 
 .logo {
     text-align: left;
-    width: 200px;
-    font-size: 30px;
+    width: 180px;
     padding-top: 30px;
 }
 .titolo {
@@ -60,17 +59,49 @@ main, footer {
 }
 .containerp2{
   display: block;
-  padding-top: 60px;
+  padding-top: 50px;
 }
+.starContainer{
+  
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  
+}
+.star{
+  cursor: pointer;
+  width:  47px;
+  height: 46px;
+  display: inline-block;
+  margin-right: 10px;
+  
+}
+.star svg {
+  width: 100%;
+  height: 100%;
+  fill: black;
+}
+.star:hover svg{
+  fill: #00ffff;
+}
+.star.active svg{
+  fill: #00ffff;
+}
+
+
 /* MAIN */
 
 
 
-/* FOOTER */
+
 
 .textarea {
   width: 100%;
   padding-top: 30px;
+  padding-left: 20px;
   border: none;
   border-bottom: 2px solid #d20094 ;
   border-radius: 5px;
@@ -87,11 +118,23 @@ main, footer {
 .bottone {
   padding: 18px 60px;
   font-size: 19px;
+  background-color: white;
+  color: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.bottone:hover,
+.bottone:active {
+  padding: 18px 60px;
+  font-size: 19px;
   background-color: #00ffff;
   color: rgb(11, 17, 59);
   border: none;
   font-weight: bold;
   box-shadow: 0 0px 18px #00ffff;
+  cursor: pointer;
+   
 }
 .buttoncontainer{
   padding-top: 50px;
