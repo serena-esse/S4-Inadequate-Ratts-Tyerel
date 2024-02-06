@@ -15,6 +15,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    margin-bottom: 7rem;
 }
 
 .logo {
@@ -25,9 +26,63 @@ header {
     padding: 1% 1% 0% 6% ;
 }
 
-#tempo-rimasto {
-    margin-left: auto;
-    font-size: 1rem;    
+#donut-chart-container{
+    position: absolute;
+    top: 1rem;
+    right:1rem;
+    width: 80px;
+    height: 80px;
+    mask-image: radial-gradient(circle farthest-side at center, transparent 49%, white 50%); 
+}
+
+.donut-chart {
+    width: 100%; 
+    height: 100%; 
+    background-color: #00FFFF; 
+    border-radius: 50%; 
+    position: relative;
+    overflow: hidden;
+    background-image: conic-gradient(#00FFFF 0deg 90deg, transparent 90deg 270deg, #00FFFF 270deg 360deg);
+  }
+  
+  .donut-chart::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  .donut-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 10px;
+  }
+  
+  .donut-text div:nth-child(2) {
+    font-size: 30px; 
+    font-weight: bold;
+  }
+
+.donut-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+.donut-text div:nth-child(2) {
+    font-size: 20px;
+    font-weight: bold;
 }
 /* END HEADER */
 
@@ -38,7 +93,6 @@ main {
     justify-content: center;
     align-items: center;
     height: 50vh;
-    display: flex;
     flex-direction: column;
 }
 
@@ -46,6 +100,9 @@ main {
     text-align: center;
     font-size: 4rem;
     line-height: 1.5;
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+    max-width: 50%;
 }
 
 .bold-text {
@@ -56,21 +113,25 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
 }
 
 .custom-button {
     width: 38%;
     padding: 1.7rem 2rem;
-    margin: 1rem;
-    border-radius: 40px;
-    background-color: transparent;
-    color: white;
+    margin: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgb(243, 243, 243);
     font-weight: bold;
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s ease;
-    border : 3px solid;
+    border-image: linear-gradient(to right, #fff, #ccc);
+    border-image-slice: 1;
+    border-radius: 50em;
+    border: 3px solid ;
+    box-shadow: 4px 4px 8px rgba(117, 117, 117, 0.9);
 }
 
 .custom-button:hover {
@@ -80,7 +141,7 @@ main {
 .question-counter {
     text-align: center;
     font-size: 1.5rem;
-    margin-top: auto;
+    margin-top : 2rem;
     letter-spacing: 2px;
 }
 
