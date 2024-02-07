@@ -12,7 +12,6 @@ let lastUserVote = 0; // Variabile globale per memorizzare l'ultimo voto dell'ut
                  }
              });
            lastUserVote=index+1
-             console.log("il voto dell'utente è :",lastUserVote);   //stampo sulla console il valore della stella cliccata
          });
 
      
@@ -36,7 +35,7 @@ let lastUserVote = 0; // Variabile globale per memorizzare l'ultimo voto dell'ut
 
 
         },2000);     
-     
+     return {lastUserVote,valoreTextarea}
      })
 
   }
