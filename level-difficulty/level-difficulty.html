@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Font per titolo e descrizioni -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./level-diffiiculty.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Logo -->
+      <div>
+        <img src="../assets/epicode_logo.png" alt="logoepicode" class="logo" />
+      </div>
+    </header>
+    <main>
+      <!-- Titolo e tondino good luck -->
+      <div class="titolo">Select the difficulty of the quiz</div>
+      <h1 class="titolo" id="grassetto">before starting</h1>
+      <div class="boxPadre">
+        <div class="objectfitCover">
+          <div class="circle-container">
+            <div class="circle">
+              <img src="../assets/start.png" alt="" />
+            </div>
+            <div class="text">Good luck</div>
+          </div>
+
+          <h2 class="difficultyLevel">Difficulty level</h2>
+          <div class="descrizioni">
+            <div class="spazio">Before proceeding, you can choose the level of the difficulty of the quiz.</div>
+          </div>
+
+          <!-- Slider -->
+          <div class="slider-container">
+            <input type="range" min="1" max="3" value="2" class="slider" id="difficulty-slider" />
+            <div class="difficulty-levels">
+              <span class="descrizioni">Low</span>
+              <span class="descrizioni">Medium</span>
+              <span class="descrizioni">High</span>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="numberQuestions">Number of questions</h2>
+            <div class="descrizioni">Choose your number of questions</div>
+            <div class="spazio">you would like to receive.</div>
+          </div>
+          <!-- Numero di domande -->
+          <label for="numero-domande" class="descrizioni">Number of questions:</label>
+          <input type="number" id="numero-domande" name="numero-domande" min="3" max="10" value="3" />
+
+          <!-- Bottone -->
+          <div><button class="bottone-procedi" id="bottone-procedi">START</button></div>
+        </div>
+        <div class="objectfitCover">
+          <div><img src="../assets/foto.png" alt="" class="fotoragazza" /></div>
+        </div>
+      </div>
+    </main>
+    <!-- Collegamento al js -->
+    <script src="./level-difficulty.js"></script>
+  </body>
+</html>
