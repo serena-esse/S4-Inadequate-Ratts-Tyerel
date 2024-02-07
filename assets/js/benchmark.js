@@ -99,7 +99,6 @@ const questions = [
 ];
 
 // Rotella tempo rimanente
-
 const canvas = document.getElementById('tempo');
 const context = canvas.getContext('2d');
 
@@ -113,15 +112,15 @@ function drawTimer() {
 
   // Background del cerchio
   context.beginPath();
-  context.arc(radius, radius, radius - lineWidth, 0, 2 * Math.PI);
+  context.arc(radius, radius, radius - lineWidth, -Math.PI / 2, 3 * Math.PI / 2);
   context.lineWidth = lineWidth;
   context.strokeStyle = 'rgba(204, 204, 204, 0.5)';
   context.stroke();
 
   // Conto alla rovescia (ordine inverso)
   const progress = (timeLeft / countdownDuration);
-  const startAngle = -Math.PI / 1;
-  const endAngle = 2 * Math.PI * progress - Math.PI / 1;
+  const startAngle = -Math.PI / 2;
+  const endAngle = 2 * Math.PI * progress - Math.PI / 2;
   context.beginPath();
   context.arc(radius, radius, radius - lineWidth, startAngle, endAngle);
   context.lineWidth = lineWidth;
@@ -129,7 +128,6 @@ function drawTimer() {
   context.stroke();
 
   // stile testo e numeri dentro al cerchio
-
   context.fillStyle = '#fff';
   context.font = '10px Outfit';
   context.textAlign = 'center';
