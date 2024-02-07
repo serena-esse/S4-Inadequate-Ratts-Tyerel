@@ -103,7 +103,7 @@ const questions = [
 const canvas = document.getElementById('tempo');
 const context = canvas.getContext('2d');
 
-const countdownDuration = 60; // seconds
+const countdownDuration = 60; // secondi
 let timeLeft = countdownDuration;
 const radius = canvas.width / 4;
 const lineWidth = 15;
@@ -111,16 +111,16 @@ const lineWidth = 15;
 function drawTimer() {
   context.clearRect(0, 0, canvas.width, canvas.height);
 
-  // Draw background circle
+  // Background del cerchio
   context.beginPath();
   context.arc(radius, radius, radius - lineWidth, 0, 2 * Math.PI);
   context.lineWidth = lineWidth;
-  context.strokeStyle = '#ccc';
+  context.strokeStyle = 'rgba(204, 204, 204, 0.5)';
   context.stroke();
 
-  // Draw countdown circle (reverse order)
+  // Conto alla rovescia (ordine inverso)
   const progress = (timeLeft / countdownDuration);
-  const startAngle = -Math.PI / 2;
+  const startAngle = -Math.PI / 1;
   const endAngle = 2 * Math.PI * progress - Math.PI / 1;
   context.beginPath();
   context.arc(radius, radius, radius - lineWidth, startAngle, endAngle);
@@ -128,7 +128,14 @@ function drawTimer() {
   context.strokeStyle = '#00FFFF'; 
   context.stroke();
 
-  
+  // stile testo e numeri dentro al cerchio
+
+  context.fillStyle = '#fff';
+  context.font = '10px Outfit';
+  context.textAlign = 'center';
+  context.textBaseline = 'middle';
+  context.fillText('SECONDS', radius, radius - 32);
+  context.fillText('REMAINING', radius, radius + 28);
   context.fillStyle = '#fff';
   context.font = '50px Outfit';
   context.textAlign = 'center';

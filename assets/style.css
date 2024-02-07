@@ -28,8 +28,9 @@ header {
 }
 
 .doughnut {
-    width: 250px;
-    height: 125px;
+    width: 260px;
+    height: 130px;
+    margin: 1rem -5rem;
   }
 
 /* END HEADER */
