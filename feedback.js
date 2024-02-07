@@ -12,6 +12,7 @@ let lastUserVote = 0; // Variabile globale per memorizzare l'ultimo voto dell'ut
                  }
              });
            lastUserVote=index+1
+            // console.log("il voto dell'utente è :",lastUserVote);   
          });
 
      

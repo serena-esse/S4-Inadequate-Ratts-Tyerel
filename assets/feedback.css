@@ -78,7 +78,8 @@ main {
   margin-right: 15px;
   
 }
-.star svg {
+ .star svg {
+  float: right;
   width: 100%;
   height: 100%;
   fill:#070b28 ;
@@ -87,10 +88,15 @@ main {
   .star svg:hover{
   fill: #00ffff;
 } 
+
 .star.active svg{
   fill: #00ffff;
-} 
+}  
 
+.star:hover svg{
+  color:#00ffff ;
+  
+}
 .textarea {
   width: 100%;
   padding-top: 30px;
