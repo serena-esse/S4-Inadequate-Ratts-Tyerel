@@ -148,6 +148,7 @@ function updateTimer() {
   }
 }
 
+
 setInterval(updateTimer, 1000);
 
 //Domande-risposte Quiz:
@@ -180,13 +181,14 @@ function displayQuestion() {
   }); 
 }
 
+
+
+
+
+
   // verifica della risposta data, se è esatta il punteggio aumenta, poi passa alla prossima domanda e mostra il punteggio finale quando tutte le domande sono state risposte.
   function checkAnswer(selectedAnswer) {
     const currentQuestion = questions[questionNumber];
-
-      if (currentQuestion.type === "boolean") {
-        selectedAnswer = selectedAnswer.toLowerCase() === "true";
-      }
 
       if (selectedAnswer === currentQuestion.correct_answer) {
         score++;
@@ -200,7 +202,25 @@ function displayQuestion() {
         showScore();
       }
     }
-
+    // Reimposta il timer ad ogni nuova domanda by Serena.
+    function displayQuestion() {
+      resetTimer(); 
+      const currentQuestion = questions[questionNumber];
+      document.getElementById("question").innerHTML = currentQuestion.question;
+      const optionsContainer = document.getElementById("options");
+      optionsContainer.innerHTML = "";
+      let options = [...currentQuestion.incorrect_answers, currentQuestion.correct_answer];
+      shuffleArray(options);
+      options.forEach((option) => {
+        const button = document.createElement("button");
+        button.innerHTML = option;
+        button.onclick = () => checkAnswer(option);
+        optionsContainer.appendChild(button);
+      });
+    }
+    function resetTimer() {
+      timeLeft = countdownDuration;
+    }
     // mostra del punteggio finale ottenuto (pagina di Serena)
     function showScore() {
       document.getElementById("quiz-container").innerHTML =
