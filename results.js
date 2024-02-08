@@ -30,3 +30,17 @@ function setConicGradient(primoPercentuale, secondoPercentuale) {
 const primaPercentuale = getPercentualeFromClass(".percent1");
 const secondaPercentuale = getPercentualeFromClass(".percent2");
 setConicGradient(primaPercentuale, secondaPercentuale);
+//fino qui funziona
+if (primaPercentuale < 60) {
+  // Se l'esame non è stato superato, cambia il testo all'interno di .donut-text
+  const donutTextElement = document.querySelector(".donut-text");
+  donutTextElement.innerHTML = `
+    <span class="donut-text1">We're sorry!</span>
+    <span class="donut-text2"> You did not pass the exam. </span>
+    <span class="donut-text3">Better luck next time!</span>
+  `;
+}
+
+// Dopo aver controllato la percentuale e cambiato il testo se necessario,
+// procediamo ad impostare il gradiente conico
+setConicGradient(primaPercentuale, secondaPercentuale);
