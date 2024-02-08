@@ -41,6 +41,15 @@ if (primaPercentuale < 60) {
   `;
 }
 
-// Dopo aver controllato la percentuale e cambiato il testo se necessario,
-// procediamo ad impostare il gradiente conico
 setConicGradient(primaPercentuale, secondaPercentuale);
+
+//calcolo percentuale
+const totalQuestions = questions.length;
+const correctPercentage = ((correctAnswers / totalQuestions) * 100).toFixed(1);
+const incorrectPercentage = ((incorrectAnswers / totalQuestions) * 100).toFixed(1);
+
+//aggiorna html percentuali e numero risposte
+document.querySelector(".percent1").textContent = correctPercentage + "%";
+document.querySelector(".percent2").textContent = incorrectPercentage + "%";
+document.querySelector(".questions1").textContent = `${correctAnswers}/${totalQuestions} questions`;
+document.querySelector(".questions2").textContent = `${incorrectAnswers}/${totalQuestions} questions`;
