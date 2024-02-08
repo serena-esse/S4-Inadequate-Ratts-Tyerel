@@ -106,11 +106,14 @@ button:hover {
 }
 
 
-.question-counter {
+footer {
     text-align: center;
     font-size: 1.5rem;
     margin-top : 4rem;
     letter-spacing: 2px;
 }
 
+#violetcolorfooter {
+    color:#AE0087
+}
 /* END MAIN */
