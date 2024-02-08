@@ -46,18 +46,30 @@ main {
     flex-direction: column;
 }
 
-.centered-text {
+/* .centered-text {
     text-align: center;
     font-size: 4rem;
     line-height: 1.5;
     margin-bottom: 1rem;
     margin-top: 5rem;
     max-width: 50%;
+} */
+
+#question {
+    text-align: center;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    margin-top: 5rem;
+    max-width: 100%;
 }
 
-.bold-text {
-    font-weight: bold;
+#options {
+    text-align: center;
 }
+
+/* .bold-text {
+    font-weight: bold;
+} */
 
 .button-container {
     display: flex;
@@ -67,7 +79,7 @@ main {
     padding: 2rem;
 }
 
-.custom-button {
+button {
     width: 38%;
     padding: 1.7rem 2rem;
     margin: 0.5rem;
@@ -84,9 +96,11 @@ main {
     box-shadow: 4px 4px 8px rgba(117, 117, 117, 0.9);
 }
 
-.custom-button:hover {
+button:hover {
     background-color: #AE0087;
 }
+
+
 
 .question-counter {
     text-align: center;
