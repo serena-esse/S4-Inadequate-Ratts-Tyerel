@@ -1,6 +1,6 @@
 body {
     font-family: 'Outfit', 'inter';
-    background-image: url(./bg.jpg);
+    background-image: url(/assets/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
