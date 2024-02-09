@@ -6,9 +6,8 @@ function inizializza() {
   spuntaCasellina();
 }
 
-//CASELLINA SPUNTA
-//1)prendiamo la casellina dove vogliamo agire
-//2)Ci mettiamo un ascoltatore
+//BOTTONE-PROCEDI
+//1)prendiamo il bottone, verifichiamo lo stato e se disabilitato lo abilito, altrimenti lo disabiito.
 
 function abilitaPulsante() {
   let bottoneProcedi = document.querySelector("#bottone-procedi");
@@ -22,6 +21,10 @@ function abilitaPulsante() {
   }
 }
 
+//SPUNTA CASELLINA
+//2)prendo l'id spunta promessa, ci metto un ascoltatore così da capire se è stata spuntata o meno.Richiamo dentro la funzione abilitaplusante,
+//a cui dovrà essere collegata e a cui passerà l'input: se spuntata abiliti il bottone, se non spuntata disabiliti il bottone.
+
 function spuntaCasellina() {
   let prendiCasellina = document.querySelector("#spuntaPromessa");
   prendiCasellina.addEventListener("click", function () {
@@ -30,14 +33,13 @@ function spuntaCasellina() {
   });
 }
 
-//BOTTONE
+//BOTTONE-PROCEDI (per passare alla pagina seguente)
 //1)prendiamo il bottone dove vogliamo agire
-//2)Ci mettiamo un ascoltatore
+//2)Ci mettiamo un ascoltatore quando intercetta il cick sul bottone procedi mi rimanda alla pagina seguente(level-difficulty)
 
 function procediEsame() {
   let bottoneProcedi = document.querySelector("#bottone-procedi");
   bottoneProcedi.addEventListener("click", function () {
-    console.log("bottone procedi cliccato"); //poi rimuoverlo
     window.location.href = "http://127.0.0.1:5500/html/level-difficulty.html"; // Inserire l'URL della tua pagina successiva
   });
 }

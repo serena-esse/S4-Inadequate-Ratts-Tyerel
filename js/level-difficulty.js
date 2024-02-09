@@ -6,7 +6,7 @@ function inizializza() {
   procediEsame();
 }
 
-//BOTTONE
+//BOTTONE START
 //1)Prendiamo il bottone dove vogliamo agire
 //2)Ci mettiamo un ascoltatore che riceve l'input sia del livello di difficoltà che del numero di domande
 
