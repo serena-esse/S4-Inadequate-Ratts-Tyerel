@@ -122,11 +122,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.logo {
+.logo-result {
   width: 200px;
   padding: 2rem;
   margin-left: 3rem;
 }
+
 h1 {
   font-family: "Outfit", sans-serif;
   text-align: center;
