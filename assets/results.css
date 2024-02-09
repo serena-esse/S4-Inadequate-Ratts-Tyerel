@@ -1,0 +1,131 @@
+body {
+  background-image: url(/assets/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.logo {
+  width: 200px;
+  padding: 2rem;
+  margin-left: 3rem;
+}
+h1 {
+  font-family: "Outfit", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 60px;
+  color: white;
+  margin-bottom: 10px;
+}
+h2 {
+  font-family: "Outfit", sans-serif;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 5rem;
+}
+.side {
+  flex: 1;
+  text-align: center;
+  color: white;
+}
+
+.outcome1,
+.outcome2 {
+  font-family: "Outfit", sans-serif;
+  font-size: 60px;
+}
+.percent1,
+.percent2 {
+  font-weight: bold;
+  font-family: "Outfit", sans-serif;
+  font-size: 60px;
+}
+.questions1,
+.questions2 {
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+}
+button {
+  text-align: center;
+  padding: 10px 20px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.025);
+  padding: 18px 60px;
+  font-size: 19px;
+  font-weight: bold;
+}
+.button {
+  text-align: center;
+  padding-top: 10px;
+}
+button:hover {
+  cursor: pointer;
+  box-shadow: 0 0px 18px #00ffff;
+  background-color: #00ffff;
+  color: rgb(11, 17, 59);
+  border: 0;
+}
+/* (A) PIE CHART */
+#donut {
+  /* (A1) CIRCLE */
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+  /* (A2) SEGMENTS */
+  background: conic-gradient(#00ffff 0deg 180deg, #d20094 180deg 360deg);
+}
+/* (B) DONUT "CONVERSION" */
+/* (B1) SMALLER CIRCLE */
+#donut::before {
+  content: "";
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background-image: url(/assets/bg.jpg);
+  clip-path: circle(50% at 50% 50%);
+}
+
+/* (B2) "CONVERT PIE TO DONUT" - CENTER SMALLER CIRCLE */
+#donut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.donut-text {
+  position: absolute;
+  width: 160px;
+  color: white;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+.donut-text1 {
+  color: white;
+  font-weight: bold;
+  display: block;
+  font-size: 14px;
+}
+.donut-text2 {
+  color: #00ffff;
+  font-weight: bold;
+  display: block;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.donut-text3 {
+  display: block;
+  margin-top: 1rem;
+  font-size: 11px;
+  line-height: 1.5;
+}
