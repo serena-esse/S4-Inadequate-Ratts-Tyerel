@@ -1,4 +1,21 @@
-const elementPercent2 = document.querySelector(".percent2");
+//calcolo percentuale
+//PRENDIAMO I DATI DALLA PAGINA PRECEDENTE
+
+let urlParams = new URLSearchParams(window.location.search);
+let parametroRisposteCorrette = urlParams.get("parametroRisposteCorrette");
+let parametroNumeroDomande = urlParams.get("parametroNumeroDomande");
+
+let totalQuestions = parametroNumeroDomande;
+let correctAnswers = parametroRisposteCorrette;
+let incorrectAnswers = totalQuestions - correctAnswers;
+let correctPercentage = ((correctAnswers / totalQuestions) * 100).toFixed(1);
+let incorrectPercentage = ((incorrectAnswers / totalQuestions) * 100).toFixed(1);
+
+//aggiorna html percentuali e numero risposte
+document.querySelector(".percent1").textContent = correctPercentage + "%";
+document.querySelector(".percent2").textContent = incorrectPercentage + "%";
+document.querySelector(".questions1").textContent = `${correctAnswers}/${totalQuestions} questions`;
+document.querySelector(".questions2").textContent = `${incorrectAnswers}/${totalQuestions} questions`;
 
 // Funzione per ottenere la percentuale da un elemento con una specifica classe
 function getPercentualeFromClass(classe) {
@@ -27,8 +44,8 @@ function setConicGradient(primoPercentuale, secondoPercentuale) {
 }
 
 // Ottieni le percentuali dai contenuti dei tag <p> e chiama la funzione per impostare il gradiente conico
-const primaPercentuale = getPercentualeFromClass(".percent1");
-const secondaPercentuale = getPercentualeFromClass(".percent2");
+const primaPercentuale = correctPercentage; //getPercentualeFromClass(".percent1");
+const secondaPercentuale = incorrectPercentage; //getPercentualeFromClass(".percent2");
 setConicGradient(primaPercentuale, secondaPercentuale);
 //fino qui funziona
 if (primaPercentuale < 60) {
@@ -42,14 +59,3 @@ if (primaPercentuale < 60) {
 }
 
 setConicGradient(primaPercentuale, secondaPercentuale);
-
-//calcolo percentuale
-const totalQuestions = questions.length;
-const correctPercentage = ((correctAnswers / totalQuestions) * 100).toFixed(1);
-const incorrectPercentage = ((incorrectAnswers / totalQuestions) * 100).toFixed(1);
-
-//aggiorna html percentuali e numero risposte
-document.querySelector(".percent1").textContent = correctPercentage + "%";
-document.querySelector(".percent2").textContent = incorrectPercentage + "%";
-document.querySelector(".questions1").textContent = `${correctAnswers}/${totalQuestions} questions`;
-document.querySelector(".questions2").textContent = `${incorrectAnswers}/${totalQuestions} questions`;

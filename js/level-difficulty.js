@@ -35,8 +35,6 @@ function procediEsame() {
 
     // Reindirizza alla nuova pagina
     window.location.href = nuovoURL;
-
-    // window.location.href = "https://www.google.it/"; // Inserire l'URL della tua pagina successiva
   });
 }
 

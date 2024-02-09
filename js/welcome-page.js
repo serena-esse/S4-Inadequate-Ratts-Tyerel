@@ -10,19 +10,23 @@ function inizializza() {
 //1)prendiamo la casellina dove vogliamo agire
 //2)Ci mettiamo un ascoltatore
 
+function abilitaPulsante() {
+  let bottoneProcedi = document.querySelector("#bottone-procedi");
+  // verifico lo stato del bottone
+  // IF se disabilitato allora lo abilito e richiamo la funzione procediEsame()
+  if (bottoneProcedi.disabled) {
+    bottoneProcedi.disabled = false; //per riabilitarlo
+    procediEsame();
+  } else {
+    bottoneProcedi.disabled = true; //se abilitato lo disabilito e mi assicuro che non possa andare avanti cliccando sul bottone
+  }
+}
+
 function spuntaCasellina() {
   let prendiCasellina = document.querySelector("#spuntaPromessa");
   prendiCasellina.addEventListener("click", function () {
-    // richiamo l'elemento bottone procedi
-    let bottoneProcedi = document.querySelector("#bottone-procedi");
-    // verifico lo stato del bottone
-    // IF se disabilitato allora lo abilito e richiamo la funzione procediEsame()
-    if (bottoneProcedi.disabled) {
-      bottoneProcedi.disabled = false; //per riabilitarlo
-      procediEsame();
-    } else {
-      bottoneProcedi.disabled = true; //se abilitato lo disabilito e mi assicuro che non possa andare avanti cliccando sul bottone
-    }
+    // richiamo la funzione per abilitare il pulsante
+    abilitaPulsante();
   });
 }
 
