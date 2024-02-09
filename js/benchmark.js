@@ -233,6 +233,7 @@ function showScore() {
   //     `;
   let parametroRisposteCorrette = encodeURIComponent(score);
   let parametroNumeroDomande = encodeURIComponent(questions.length);
+  //
   // PER INVIARE I DATI ALLA PAGINA RESULT
   //passiamo i parametri delle risposte corrette e quelle totali
   let nuovoURL =
@@ -244,7 +245,7 @@ function showScore() {
   // Reindirizza alla nuova pagina
   window.location.href = nuovoURL;
 }
-// funzione da rivedere ma penso che mi serva per richiamare il punteggio finale
+// funzione per richiamare il punteggio finale
 function nextQuestion() {
   if (questionNumber < questions.length) {
     displayQuestion();
