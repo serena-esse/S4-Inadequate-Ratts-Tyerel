@@ -1,43 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/benchmark.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/benchmark.css" />
     <title>Benchmark</title>
-</head>
-<body>
-    
-        <header>
-            
-            <img class="logo" src="../assets/epicode_logo.png" alt="epicode.logo">
+  </head>
+  <body>
+    <main id="benchmark-section">
+      <header>
+        <div class="logo-container"><img class="logo" src="../assets/epicode_logo.png" alt="epicode.logo" /></div>
+        <div class="doughnut-container"><canvas id="tempo" class="doughnut"></canvas></div>
+      </header>
 
-            <canvas id="tempo" class="doughnut"></canvas>
-            
-        </header>
+      <main>
+        <div id="quiz-container">
+          <div class="centered-text">
+            <p id="question"></p>
+            <div id="options"></div>
+          </div>
+        </div>
+        <footer>
+          <p id="footer-question-number">
+            QUESTION <span id="current-question-number">1</span
+            ><span id="violetcolorfooter">/<span id="total-questions">10</span></span>
+          </p>
+        </footer>
+      </main>
 
-        <main>
-
-            <div id="quiz-container"> 
-                    <div class="centered-text">
-                        <p id="question"></p> 
-                        <div id="options"></div> 
-                    </div>     
-            </div>
-            
-            <footer>
-                <p id="footer-question-number">QUESTION <span id="current-question-number">1</span><span id="violetcolorfooter">/<span id="total-questions">10</span></span></p>
-            </footer>
-        
-        </main>
-
-    <script src="../js/benchmark.js"></script>
-</body>
+      <script src="../js/benchmark.js"></script>
+    </main>
+    <!-- Results Section -->
+    <main id="results-section" style="display: none">
+      <!-- //<header><img class="logo" src="../assets/epicode_logo.png" alt="epicode_logo" /></header> -->
+      <h1>Results</h1>
+      <h2>The summary of your answers:</h2>
+      <div class="container">
+        <div class="side">
+          <p class="outcome1">Correct</p>
+          <p class="percent1">1%</p>
+          <p class="questions1">4/10 questions</p>
+        </div>
+        <div id="donut" class="gradiente-conico">
+          <span class="donut-text">
+            <span class="donut-text1">Congratulations!</span>
+            <span class="donut-text2"> You passed the exam. </span>
+            <span class="donut-text3"
+              >We'll send you the certificate in few minutes. Check your email (including promotions / spam
+              folder)</span
+            >
+          </span>
+        </div>
+        <div class="side">
+          <p class="outcome2">Wrong</p>
+          <p class="percent2">99%</p>
+          <p class="questions2">2/10 questions</p>
+        </div>
+      </div>
+      <div class="button">
+        <a href="http://127.0.0.1:5500/html/feedback.html"> <button>RATE US</button></a>
+      </div>
+      <script src="../js/results.js"></script>
+    </main>
+  </body>
 </html>
-
-
-
-

@@ -1,3 +1,8 @@
+#results-section {
+  display: none; /* La sezione dei risultati è nascosta all'inizio */
+  /* Altri stili per personalizzare l'aspetto della sezione dei risultati */
+}
+
 body {
   background-image: url(../assets/bg.jpg);
   background-size: cover;
