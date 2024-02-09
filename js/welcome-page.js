@@ -34,6 +34,6 @@ function procediEsame() {
   let bottoneProcedi = document.querySelector("#bottone-procedi");
   bottoneProcedi.addEventListener("click", function () {
     console.log("bottone procedi cliccato"); //poi rimuoverlo
-    window.location.href = "http://127.0.0.1:5501/index.html"; // Inserire l'URL della tua pagina successiva
+    window.location.href = "http://127.0.0.1:5500/html/level-difficulty.html"; // Inserire l'URL della tua pagina successiva
   });
 }

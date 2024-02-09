@@ -27,7 +27,11 @@ function procediEsame() {
     // Costruisci l'URL con i parametri
     //al posto di pagina2 inserire come Marco ha rinominato il suo index.
     //il ? indica che inizierà la parte dei parametri che noi indichiamo con parametroDomande e parametroLivello
-    let nuovoURL = "pagina2.html?parametroDomande=" + parametroDomande + "&parametroLivello=" + parametroLivello;
+    let nuovoURL =
+      "http://127.0.0.1:5500/html/benchmark.html?parametroDomande=" +
+      parametroDomande +
+      "&parametroLivello=" +
+      parametroLivello;
 
     // Reindirizza alla nuova pagina
     window.location.href = nuovoURL;
@@ -37,6 +41,6 @@ function procediEsame() {
 }
 
 // PAGINA3 MARCO DEVE INSERIRE QUESTE TRE RIGHE nel window.onload
-let urlParams = new URLSearchParams(window.location.search);
-let parametroDomande = urlParams.get("parametroDomande");
-let parametroLivello = urlParams.get("parametroLivello");
+// let urlParams = new URLSearchParams(window.location.search);
+// let parametroDomande = urlParams.get("parametroDomande");
+// let parametroLivello = urlParams.get("parametroLivello");
