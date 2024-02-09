@@ -39,6 +39,7 @@ h2 {
   flex: 1;
   text-align: center;
   color: white;
+  line-height: 5px;
 }
 
 .outcome1,
@@ -51,6 +52,7 @@ h2 {
   font-weight: bold;
   font-family: "Outfit", sans-serif;
   font-size: 60px;
+  margin-bottom: 43px;
 }
 .questions1,
 .questions2 {
