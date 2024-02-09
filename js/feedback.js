@@ -42,12 +42,6 @@ function bottone() {
   button.addEventListener("click", function () {
     // stampa il contenuto della textare
     const valoreTextarea = textarea.value;
-
-    if (valoreTextarea.trim() === "") {
-      // verifico se il campo di textaa è vuoto
-      alert("Si prega di scrivere un feedback prima di procedere ");
-      return;
-    }
     console.log("il voto dell'utente è :", lastUserVote);
 
     console.log("contenuto textarea :", valoreTextarea);
