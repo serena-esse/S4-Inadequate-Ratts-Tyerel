@@ -45,15 +45,6 @@ main {
     flex-direction: column;
 }
 
-/* .centered-text {
-    text-align: center;
-    font-size: 4rem;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-    margin-top: 5rem;
-    max-width: 50%;
-} */
-
 #question {
     text-align: center;
     font-size: 3rem;
@@ -65,7 +56,6 @@ main {
 
 #options {
     text-align: center;
-    
     flex-wrap: wrap;
     justify-content: space-around;
     margin-bottom: 2rem;
@@ -79,10 +69,6 @@ h2 {
 h2 p {
     text-align: center;
 }
-
-/* .bold-text {
-    font-weight: bold;
-} */
 
 button {
     width: 35%;
@@ -116,4 +102,5 @@ footer {
 #violetcolorfooter {
     color:#AE0087
 }
+
 /* END MAIN */
